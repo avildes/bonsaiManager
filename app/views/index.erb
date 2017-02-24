@@ -1,0 +1,15 @@
+<html>
+  <head>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+  	<script src="chartkick.js"></script>
+  </head>
+  <body>
+
+  <h1>Sensores de Umidade</h1>
+  <%= line_chart @sensors.map{ 
+  		|name, data|
+    	{name: name, data: data}
+	} %>
+  </body>
+</html>
